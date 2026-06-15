@@ -79,10 +79,23 @@ export default function AdminDashboard() {
   ];
 
   const S = {
-    page:    { minHeight:'100vh', background:'linear-gradient(135deg,#0a0a0f 0%,#0d0d1a 50%,#0a0a0f 100%)', padding:'90px 32px 60px' },
+    page: {
+  minHeight:'100vh',
+  width:'100%',
+  overflowX:'hidden',
+  background:'linear-gradient(135deg,#0a0a0f 0%,#0d0d1a 50%,#0a0a0f 100%)',
+  padding:'90px 16px 60px'
+},
     blob1:   { position:'fixed', width:600, height:600, borderRadius:'50%', background:'rgba(99,102,241,0.05)', top:'-200px', right:'-200px', filter:'blur(80px)', pointerEvents:'none' },
     blob2:   { position:'fixed', width:400, height:400, borderRadius:'50%', background:'rgba(139,92,246,0.04)', bottom:'-100px', left:'-100px', filter:'blur(60px)', pointerEvents:'none' },
-    inner:   { maxWidth:'1280px', margin:'0 auto', position:'relative', zIndex:1 },
+   inner: {
+  width:'100%',
+  maxWidth:'1280px',
+  margin:'0 auto',
+  position:'relative',
+  zIndex:1,
+  overflowX:'hidden'
+},
     label:   { fontSize:'13px', color:'#94a3b8', marginBottom:'7px', display:'block', fontWeight:500 },
     dimText: { color:'#94a3b8', fontSize:'13px' },
     mutedText:{ color:'#64748b', fontSize:'12px' },
@@ -146,7 +159,14 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Recent panels */}
-                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'20px' }}>
+                <div style={{
+  display:'grid',
+  gridTemplateColumns:
+    window.innerWidth < 768
+      ? '1fr'
+      : '1fr 1fr',
+  gap:'20px'
+}}>
 
                   {/* Recent Appointments */}
                   <div className="glass" style={{ padding:'24px' }}>
