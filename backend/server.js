@@ -9,9 +9,8 @@ const appointmentRoutes = require('./routes/appointments');
 const adminRoutes = require('./routes/admin'); // ← MUST BE HERE
 
 const app = express();
-
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ["https://appointment-booking-rosy.vercel.app/"],
   credentials: true
 }));
 app.use(express.json());
