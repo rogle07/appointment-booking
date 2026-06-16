@@ -18,15 +18,23 @@ export default function Navbar() {
   const handleLogout = () => { logout(); navigate('/login'); };
 
   return (
-    <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-      padding: '14px 40px',
-      background: scrolled ? 'rgba(15,15,26,0.95)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(20px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
-      transition: 'all 0.3s ease',
-      display: 'flex', justifyContent: 'space-between', alignItems: 'center'
-    }}>
+   <nav style={{
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1000,
+  padding: window.innerWidth < 768 ? '12px 16px' : '14px 40px',
+  background: scrolled ? 'rgba(15,15,26,0.95)' : 'transparent',
+  backdropFilter: scrolled ? 'blur(20px)' : 'none',
+  borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
+  transition: 'all 0.3s ease',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexWrap: 'wrap',
+  gap: '10px'
+}}>
       {/* Logo */}
       <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
         <div style={{
