@@ -90,7 +90,7 @@ export default function MyAppointments() {
                       </div>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '10px' }}>
-                      <span className={`badge badge-${a.status}`}>{a.status}</span>
+                      <span className={`badge badge-${a.status}`} style={{ color:'#98e653'}}>{a.status}</span>
                       {a.status === 'pending' && (
                         <button onClick={() => handleCancel(a._id)} style={{ background: 'rgba(248,113,113,0.1)', color: '#f87171', border: '1px solid rgba(248,113,113,0.25)', padding: '6px 14px', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 600, transition: 'all 0.2s' }}>
                           Cancel

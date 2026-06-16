@@ -179,7 +179,7 @@ export default function AdminDashboard() {
                             <div style={{ fontWeight:600, color:'#e2e8f0', fontSize:'13px' }}>{a.service?.name || 'N/A'}</div>
                             <div style={{ color:'#475569', fontSize:'11px', marginTop:'2px' }}>{a.customer?.name} → {a.provider?.name}</div>
                           </div>
-                          <span className={`badge badge-${a.status}`}>{a.status}</span>
+                          <span className={`badge badge-${a.status}`} style={{ color:'#98e653'}}>{a.status}</span>
                         </div>
                       ))
                     }

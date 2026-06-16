@@ -135,7 +135,7 @@ export default function ProviderDashboard() {
                           </div>
                         </div>
                         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
-                          <span className={`badge badge-${a.status}`}>{a.status}</span>
+                          <span className={`badge badge-${a.status}`} style={{ color:'#98e653'}}>{a.status}</span>
                           {a.status === 'pending' && (
                             <>
                               <button onClick={() => updateStatus(a._id, 'confirmed')} style={{ background: 'rgba(52,211,153,0.12)', color: '#34d399', border: '1px solid rgba(52,211,153,0.25)', padding: '7px 14px', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 600 }}>✅ Confirm</button>
