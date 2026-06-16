@@ -311,7 +311,7 @@ export default function AdminDashboard() {
                             </div>
                           </div>
                           <div style={{ display:'flex', gap:'10px', alignItems:'center' }}>
-                            <span className={`badge badge-${a.status}`}>{a.status}</span>
+                            <span className={`badge badge-${a.status}`} style={{ color:'#98e653'}}>{a.status}</span>
                             <select onChange={e=>updateStatus(a._id,e.target.value)} value={a.status}
                               style={{ background:'rgba(15,15,30,0.9)', border:'1px solid rgba(255,255,255,0.12)', color:'#e2e8f0', padding:'7px 12px', borderRadius:'8px', fontSize:'12px', cursor:'pointer', outline:'none', fontWeight:500 }}>
                               {['pending','confirmed','cancelled','completed'].map(s=><option key={s} value={s} style={{ background:'#1e1e2e', color:'#e2e8f0' }}>{s}</option>)}
